@@ -15,7 +15,7 @@ struct Todo: Codable, Equatable {
     var isDone: Bool
     var detail: String
     var isToday: Bool
-    
+//    mutating : self 프로퍼티에 새로운 인스턴스 할당
     mutating func update(isDone: Bool, detail: String, isToday: Bool) {
         // TODO: update 로직 추가
         
