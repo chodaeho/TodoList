@@ -10,6 +10,9 @@ import UIKit
 
 
 // TODO: Codable과 Equatable 추가
+// Codable 프로토콜 : struct를 아주 쉽게 json 형태의 데이터로 만들수도 있고 json 데이터를 아주 쉽게 struct로 만들수 있게 해줌
+// encode : struct를 json으로 변경
+// decode : json를 struct으로 변경
 struct Todo: Codable, Equatable {
     let id: Int
     var isDone: Bool
