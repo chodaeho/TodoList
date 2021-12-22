@@ -125,25 +125,92 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="T7D-hv-yew"/>
                                 </connections>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1pd-Js-ngO">
+                                <rect key="frame" x="0.0" y="753" width="414" height="60"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="I want to..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m1H-dh-Xp2">
+                                        <rect key="frame" x="8" y="13" width="290" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bdn-J2-izw">
+                                        <rect key="frame" x="363" y="12.5" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="Opd-OW-pBM"/>
+                                            <constraint firstAttribute="height" constant="35" id="VIZ-Wa-8k8"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="plus" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" weight="bold"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addTaskButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sMA-YU-tp9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhm-jt-bx1">
+                                        <rect key="frame" x="308" y="12.5" width="45" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="IFT-lx-Cac"/>
+                                            <constraint firstAttribute="width" constant="45" id="nEY-ff-QiQ"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="today">
+                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="isTodayButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2I3-zx-KPr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+                                <constraints>
+                                    <constraint firstItem="Bdn-J2-izw" firstAttribute="centerY" secondItem="1pd-Js-ngO" secondAttribute="centerY" id="A9n-Yp-ERC"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bdn-J2-izw" secondAttribute="trailing" constant="16" id="GeH-1x-ZaD"/>
+                                    <constraint firstAttribute="height" constant="60" id="Mi7-ov-zhf"/>
+                                    <constraint firstItem="bhm-jt-bx1" firstAttribute="leading" secondItem="m1H-dh-Xp2" secondAttribute="trailing" constant="10" id="gxi-Z3-WMG"/>
+                                    <constraint firstItem="bhm-jt-bx1" firstAttribute="centerY" secondItem="Bdn-J2-izw" secondAttribute="centerY" id="h7A-mg-M6L"/>
+                                    <constraint firstItem="m1H-dh-Xp2" firstAttribute="leading" secondItem="1pd-Js-ngO" secondAttribute="leading" constant="8" id="lFP-e2-jaN"/>
+                                    <constraint firstItem="m1H-dh-Xp2" firstAttribute="centerY" secondItem="1pd-Js-ngO" secondAttribute="centerY" id="oAG-8q-tBl"/>
+                                    <constraint firstItem="Bdn-J2-izw" firstAttribute="leading" secondItem="bhm-jt-bx1" secondAttribute="trailing" constant="10" id="uJ6-s5-Kce"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Dac-Tr-eM7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3ru-NF-H7J"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1pd-Js-ngO" secondAttribute="trailing" id="I0x-sh-fLT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dac-Tr-eM7" secondAttribute="trailing" id="Jc1-hm-UUY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Dac-Tr-eM7" secondAttribute="bottom" id="fRW-VT-pQx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1pd-Js-ngO" secondAttribute="bottom" id="iMx-iq-t5y"/>
+                            <constraint firstItem="1pd-Js-ngO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="l5J-5v-X0F"/>
                             <constraint firstItem="Dac-Tr-eM7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="obK-Os-arc"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="KUR-ag-LAL" appends="YES" id="npD-aF-LuG"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tasks" image="checkmark.circle.fill" catalog="system" id="zan-H5-GGu"/>
                     <connections>
+                        <outlet property="addButton" destination="Bdn-J2-izw" id="a1T-Pc-n3f"/>
                         <outlet property="collectionView" destination="Dac-Tr-eM7" id="MeX-33-IFU"/>
+                        <outlet property="inputTextField" destination="m1H-dh-Xp2" id="Wj9-R6-nyw"/>
+                        <outlet property="inputViewBottom" destination="iMx-iq-t5y" id="ZfY-NB-Fau"/>
+                        <outlet property="isTodayButton" destination="bhm-jt-bx1" id="yXD-bu-GTc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="KUR-ag-LAL">
+                    <connections>
+                        <action selector="tabBG:" destination="BYZ-38-t0r" id="X6T-3d-zYX"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="612" y="984"/>
+            <point key="canvasLocation" x="611.59420289855075" y="983.70535714285711"/>
         </scene>
         <!--Settings-->
         <scene sceneID="WeC-l7-zWO">
@@ -227,6 +294,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="owL-QF-HaC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TCh-jn-WLT">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" systemColor="systemPinkColor"/>
@@ -245,7 +313,11 @@
         <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="circle" catalog="system" width="128" height="121"/>
         <image name="gear" catalog="system" width="128" height="119"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="secondarySystemFillColor">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
